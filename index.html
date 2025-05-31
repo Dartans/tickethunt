@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketHunt - Interactive Business Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-treasure-map"></i>
+                <span>TicketHunt</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#businesses">For Businesses</a></li>
+                <li><a href="#players">For Players</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Turn Your City Into a <span class="highlight">Treasure Hunt</span></h1>
+            <p>Local businesses become clue stops, driving new customers to their doors while participants hunt for clues to win River Lions tickets!</p>
+            <div class="hero-buttons">
+                <a href="#businesses" class="btn btn-primary">Join as Business</a>
+                <a href="#players" class="btn btn-secondary">Start Playing</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="treasure-map">
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How TicketHunt Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Businesses Join</h3>
+                    <p>Local businesses pay a small fee to become clue stops and create engaging challenges for participants.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Players Hunt</h3>
+                    <p>Participants follow clues around the city, visiting businesses and solving challenges along the way.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Win Tickets</h3>
+                    <p>Complete the hunt to win River Lions tickets worth $40, creating excitement and driving engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Businesses -->
+    <section id="businesses" class="businesses">
+        <div class="container">
+            <h2>Boost Your Business with TicketHunt</h2>
+            <p class="section-subtitle">Drive new customers to your door with unique, interactive marketing</p>
+            
+            <div class="pricing-tiers">
+                <div class="tier">
+                    <div class="tier-header">
+                        <h3>Bronze Clue</h3>
+                        <div class="price">$50</div>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Basic clue mention</li>
+                        <li><i class="fas fa-check"></i> Business listing</li>
+                        <li><i class="fas fa-check"></i> Social media mention</li>
+                        <li><i class="fas fa-check"></i> Simple challenge</li>
+                    </ul>
+                </div>
+                
+                <div class="tier featured">
+                    <div class="tier-header">
+                        <h3>Silver Adventure</h3>
+                        <div class="price">$100</div>
+                        <span class="badge">Popular</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Featured clue placement</li>
+                        <li><i class="fas fa-check"></i> Extended business profile</li>
+                        <li><i class="fas fa-check"></i> Photo challenge opportunity</li>
+                        <li><i class="fas fa-check"></i> Interactive puzzle</li>
+                        <li><i class="fas fa-check"></i> Special offer showcase</li>
+                    </ul>
+                </div>
+                
+                <div class="tier">
+                    <div class="tier-header">
+                        <h3>Gold Experience</h3>
+                        <div class="price">$150+</div>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Major clue centerpiece</li>
+                        <li><i class="fas fa-check"></i> Premium business showcase</li>
+                        <li><i class="fas fa-check"></i> Custom challenge design</li>
+                        <li><i class="fas fa-check"></i> Video content feature</li>
+                        <li><i class="fas fa-check"></i> Exclusive partnerships</li>
+                        <li><i class="fas fa-check"></i> Multi-visit experiences</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Business Registration Form -->
+            <div class="business-form-container">
+                <h3>Ready to Join the Hunt?</h3>
+                <form id="businessForm" class="business-form">
+                    <div class="form-group">
+                        <label for="businessName">Business Name *</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Contact Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="tier">Investment Level *</label>
+                            <select id="tier" name="tier" required>
+                                <option value="">Select your tier</option>
+                                <option value="bronze">Bronze Clue - $50</option>
+                                <option value="silver">Silver Adventure - $100</option>
+                                <option value="gold">Gold Experience - $150</option>
+                                <option value="custom">Custom Package - $200+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Business Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="businessType">Business Type</label>
+                        <select id="businessType" name="businessType">
+                            <option value="">Select business type</option>
+                            <option value="restaurant">Restaurant/Café</option>
+                            <option value="retail">Retail Store</option>
+                            <option value="service">Service Business</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="fitness">Fitness/Wellness</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clueIdea">Clue/Challenge Idea</label>
+                        <textarea id="clueIdea" name="clueIdea" rows="3" placeholder="Share your ideas for how customers might interact with your business during the hunt..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialOffer">Special Offer for Participants</label>
+                        <textarea id="specialOffer" name="specialOffer" rows="2" placeholder="Any discounts or special offers for hunt participants?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalNotes">Additional Notes</label>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="3" placeholder="Anything else you'd like us to know?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Players -->
+    <section id="players" class="players">
+        <div class="container">
+            <h2>Ready for an Adventure?</h2>
+            <div class="player-info">
+                <div class="player-content">
+                    <h3>How to Play</h3>
+                    <ol class="play-steps">
+                        <li>Sign up for the current hunt</li>
+                        <li>Receive your first clue via email</li>
+                        <li>Visit participating businesses</li>
+                        <li>Solve challenges and collect stamps</li>
+                        <li>Complete the hunt to win River Lions tickets!</li>
+                    </ol>
+                    <div class="prize-info">
+                        <h4><i class="fas fa-trophy"></i> Prize: River Lions Tickets ($40 value)</h4>
+                        <p>Each completed hunt earns you a ticket to see the River Lions in action!</p>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Join Next Hunt</a>
+                </div>
+                <div class="player-image">
+                    <div class="hunt-illustration">
+                        <i class="fas fa-route"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@tickethunt.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>(555) 123-HUNT</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Downtown Area<br>Near You</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-treasure-map"></i>
+                    <span>TicketHunt</span>
+                </div>
+                <p>&copy; 2025 TicketHunt. Bringing communities together through adventure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
