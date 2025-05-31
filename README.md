@@ -1,6 +1,19 @@
 # TicketHunt Website
 
-A modern, interactive **static website** for the TicketHunt business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win River Lions tickets!
+*Presented by Expose The North*
+
+A modern, interactive **static website** for the TicketHunt business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win local event tickets!
+
+## About Expose The North
+
+TicketHunt is proudly presented by **Expose The North**, a multimedia production company with over 24 years of experience in media production and community engagement. ETN is known for their dedication to the craft and innovation in bringing communities together.
+
+- Reader's Choice Award Winner Diamond Tier 2021
+- Twice nominated for Niagara Music Awards
+- "We Go There...And BEYOND!"
+
+**Website**: [sharetheshock.ca](https://sharetheshock.ca/)  
+**Live Site**: [tickethunt.sharetheshock.ca](https://tickethunt.sharetheshock.ca/)
 
 ## Features
 
