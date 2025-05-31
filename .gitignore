@@ -10,6 +10,9 @@ package-lock.json
 # Vercel
 .vercel
 
+# Old server file (now using Vercel functions)
+server.js.backup
+
 # Logs
 logs
 *.log
