@@ -62,6 +62,16 @@ body {
     color: var(--etn-pink);
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo-img:hover {
+    transform: scale(1.05);
+}
+
 .nav-logo i {
     margin-right: 10px;
     font-size: 1.8rem;
@@ -236,6 +246,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-logo-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 .treasure-map {
@@ -689,6 +713,12 @@ body {
     color: var(--accent-color);
 }
 
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    filter: brightness(1.2);
+}
+
 .footer-logo i {
     margin-right: 10px;
     color: var(--accent-color);
@@ -758,6 +788,82 @@ body {
     font-style: italic;
 }
 
+/* Sponsor Logo Section */
+.sponsor-logo-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sponsor-logo-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sponsor-logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.sponsor-logo-link:hover {
+    transform: scale(1.05);
+}
+
+.sponsor-logo {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+    transition: filter 0.3s ease;
+    border-radius: 15px;
+    background: white;
+    padding: 20px;
+}
+
+.sponsor-logo:hover {
+    filter: drop-shadow(0 15px 35px rgba(251, 32, 86, 0.2));
+}
+
+.sponsor-text {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.sponsor-text h3 {
+    font-size: 2rem;
+    color: var(--etn-pink);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.sponsor-tagline {
+    font-size: 1.3rem;
+    color: var(--etn-pink);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.sponsor-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.sponsor-description strong {
+    color: var(--etn-pink);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -802,6 +908,10 @@ body {
         justify-content: center;
     }
     
+    .hero-logo-img {
+        max-width: 300px;
+    }
+    
     .treasure-map {
         font-size: 8rem;
     }
@@ -843,6 +953,35 @@ body {
     .sponsor-links {
         justify-content: center;
     }
+    
+    .sponsor-logo-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .sponsor-text {
+        text-align: center;
+        min-width: auto;
+    }
+    
+    .sponsor-logo {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .sponsor-text h3 {
+        font-size: 1.7rem;
+    }
+    
+    .sponsor-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .sponsor-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -855,8 +994,37 @@ body {
         align-items: center;
     }
     
+    .hero-logo-img {
+        max-width: 250px;
+    }
+    
+    .nav-logo-img {
+        height: 35px;
+    }
+    
+    .footer-logo-img {
+        height: 40px;
+    }
+    
     .btn {
         width: 100%;
         max-width: 280px;
+    }
+    
+    .sponsor-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .sponsor-logo-section {
+        padding: 60px 15px;
+    }
+    
+    .sponsor-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .sponsor-tagline {
+        font-size: 1rem;
     }
 }

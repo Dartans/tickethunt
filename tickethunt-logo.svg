@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150">
+  <defs>
+    <linearGradient id="treasureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb2056;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff4081;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb2056;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="huntGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#222222;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#444444;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="mapGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background circle for icon -->
+  <circle cx="75" cy="75" r="60" fill="url(#mapGradient)" stroke="url(#treasureGradient)" stroke-width="4"/>
+  
+  <!-- Treasure map icon -->
+  <g transform="translate(75,75)">
+    <!-- Map base -->
+    <rect x="-35" y="-25" width="70" height="50" rx="5" fill="url(#mapGradient)" stroke="url(#huntGradient)" stroke-width="2"/>
+    
+    <!-- Treasure chest -->
+    <rect x="-15" y="-10" width="30" height="20" rx="3" fill="url(#treasureGradient)"/>
+    <rect x="-15" y="-10" width="30" height="8" rx="3" fill="url(#huntGradient)"/>
+    
+    <!-- X marks the spot -->
+    <g stroke="url(#treasureGradient)" stroke-width="3" stroke-linecap="round">
+      <line x1="15" y1="-20" x2="25" y2="-10"/>
+      <line x1="25" y1="-20" x2="15" y2="-10"/>
+    </g>
+    
+    <!-- Path/route lines -->
+    <path d="M -30,-15 Q -20,-5 -10,5 Q 0,15 10,5 Q 20,-5 30,-15" 
+          stroke="url(#treasureGradient)" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-dasharray="3,2"
+          opacity="0.7"/>
+    
+    <!-- Location pins -->
+    <circle cx="-25" cy="-15" r="3" fill="url(#treasureGradient)"/>
+    <circle cx="0" cy="10" r="3" fill="url(#treasureGradient)"/>
+    <circle cx="25" cy="-15" r="3" fill="url(#treasureGradient)"/>
+  </g>
+  
+  <!-- Main text -->
+  <text x="160" y="55" fill="url(#treasureGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">TICKET</text>
+  <text x="160" y="95" fill="url(#huntGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">HUNT</text>
+  
+  <!-- Tagline -->
+  <text x="160" y="115" fill="url(#huntGradient)" font-family="Arial, sans-serif" font-size="14" font-style="italic">Interactive Business Adventure</text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.4">
+    <!-- Compass points -->
+    <circle cx="450" cy="30" r="2" fill="url(#treasureGradient)"/>
+    <circle cx="470" cy="50" r="3" fill="url(#treasureGradient)"/>
+    <circle cx="460" cy="70" r="2" fill="url(#treasureGradient)"/>
+    <circle cx="480" cy="90" r="2.5" fill="url(#treasureGradient)"/>
+    
+    <!-- Small treasure icons -->
+    <polygon points="440,120 445,115 450,120 445,125" fill="url(#treasureGradient)"/>
+    <polygon points="465,110 470,105 475,110 470,115" fill="url(#treasureGradient)"/>
+  </g>
+  
+  <!-- Subtle border -->
+  <rect x="2" y="2" width="496" height="146" rx="10" fill="none" stroke="url(#treasureGradient)" stroke-width="1" opacity="0.3"/>
+</svg>
