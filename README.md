@@ -1,14 +1,15 @@
 # TicketHunt Website
 
-A modern, interactive website for the TicketHunt business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win River Lions tickets!
+A modern, interactive **static website** for the TicketHunt business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win River Lions tickets!
 
 ## Features
 
 - **Modern, Responsive Design**: Beautiful UI that works on all devices
 - **Business Registration**: Complete form system with pricing tiers ($50, $100, $150+)
 - **Interactive Elements**: Smooth animations and user-friendly interface
-- **Email Integration**: Automatic notifications for new business applications
+- **Email Integration**: Uses `mailto:` links to open email client for business applications
 - **Multiple Pricing Tiers**: Bronze, Silver, and Gold packages for different involvement levels
+- **Static Site**: No server required - just HTML, CSS, and JavaScript
 
 ## Pricing Structure
 
@@ -18,61 +19,51 @@ A modern, interactive website for the TicketHunt business adventure concept. Loc
 
 ## Quick Start
 
-### Option 1: Static Website (HTML Only)
-Just open `index.html` in your browser to view the static version.
+Simply open `index.html` in your browser or deploy to any static hosting service like Vercel, Netlify, or GitHub Pages.
 
-### Option 2: Full Server (with Email Integration)
+### Local Development:
+```bash
+# No build process required - just open the file
+open index.html
+# or serve with any static server
+python -m http.server 8000
+# or
+npx serve .
+```
 
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Set up Environment Variables**:
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` file with your email configuration:
-   ```
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASS=your-app-password
-   ADMIN_EMAIL=admin@tickethunt.com
-   PORT=3000
-   ```
-
-3. **Start the Server**:
-   ```bash
-   npm start
-   ```
-
-4. **Open Your Browser**:
-   Visit `http://localhost:3000`
+### Deployment:
+This is a static site that can be deployed anywhere:
+- **Vercel**: `vercel --prod`
+- **Netlify**: Drag and drop the folder
+- **GitHub Pages**: Push to a repository and enable Pages
 
 ## File Structure
 
 ```
-tickethunt/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # Frontend JavaScript
-├── server.js           # Backend server (Node.js/Express)
-├── package.json        # Node.js dependencies
-├── .env.example        # Environment variables template
-└── README.md           # This file
+/
+├── index.html          # Main website file
+├── styles.css          # All styling and responsive design
+├── script.js           # Interactive functionality and form handling
+├── vercel.json         # Vercel deployment configuration
+├── package.json        # Project metadata (no dependencies needed)
+└── README.md           # Documentation
 ```
 
-## Email Setup
+## How It Works
 
-For the contact form to work properly, you'll need to:
+### Business Application Process:
+1. Business fills out the registration form
+2. Form validation ensures all required fields are completed
+3. JavaScript generates a pre-filled email with all application details
+4. User's default email client opens with the application ready to send
+5. Business sends email to `info@tickethunt.com` to complete application
 
-1. **Gmail Setup** (recommended):
-   - Enable 2-factor authentication
-   - Generate an "App Password" for the website
-   - Use this app password in the `.env` file
-
-2. **Other Email Services**:
-   - Update the `transporter` configuration in `server.js`
-   - Adjust settings for your email provider
+### Benefits of Static Approach:
+- **No server costs** - Deploy anywhere for free
+- **No backend maintenance** - No databases, email servers, or APIs to manage
+- **100% reliable** - Static files always work
+- **Fast loading** - No server processing delays
+- **Easy deployment** - Works on any hosting service
 
 ## Customization
 
@@ -83,22 +74,12 @@ For the contact form to work properly, you'll need to:
 
 ### Content
 - Edit `index.html` to update text, images, and contact information
-- Modify pricing tiers in both HTML and server validation
+- Modify pricing tiers and descriptions
+- Update contact email addresses
 
-### Business Logic
-- Update pricing validation in `server.js`
-- Customize email templates in the server file
-- Add database integration for storing applications
-
-## Deployment
-
-### Static Hosting (Netlify, Vercel, GitHub Pages)
-Just upload the HTML, CSS, and JS files for a static version.
-
-### Full Server Hosting (Heroku, DigitalOcean, AWS)
-1. Set environment variables on your hosting platform
-2. Deploy the entire project including `server.js`
-3. Ensure Node.js is available on your hosting platform
+### Email Templates
+- Modify the `createEmailContent()` function in `script.js`
+- Customize the email subject line and formatting
 
 ## Browser Support
 
@@ -107,14 +88,6 @@ Just upload the HTML, CSS, and JS files for a static version.
 - Safari
 - Edge
 - Mobile browsers
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## License
 

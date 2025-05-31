@@ -67,54 +67,29 @@ document.getElementById('businessForm').addEventListener('submit', function(e) {
     // Show loading state
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Submitting...';
+    submitBtn.textContent = 'Opening Email...';
     submitBtn.disabled = true;
     
-    // Try to submit to backend, fall back to email if server not available
-    fetch('/api/register-business', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            showNotification(result.message, 'success');
-            this.reset();
-            
-            // Reset field colors
-            requiredFields.forEach(field => {
-                document.getElementById(field).style.borderColor = '#e0e0e0';
-            });
-        } else {
-            showNotification(result.message, 'error');
-        }
-    })
-    .catch(error => {
-        console.log('Server not available, using email fallback...');
-        
-        // Fallback: Create email link
-        const emailBody = createEmailContent(data);
-        const mailtoLink = `mailto:info@tickethunt.com?subject=TicketHunt Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
-        
-        // Open email client
-        window.open(mailtoLink);
-        
-        showNotification('Your email client will open with the application details. Please send the email to complete your application.', 'success');
-        this.reset();
-        
-        // Reset field colors
-        requiredFields.forEach(field => {
-            document.getElementById(field).style.borderColor = '#e0e0e0';
-        });
-    })
-    .finally(() => {
-        // Reset button
+    // Create email content and open email client
+    const emailBody = createEmailContent(data);
+    const mailtoLink = `mailto:info@tickethunt.com?subject=TicketHunt Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.open(mailtoLink);
+    
+    showNotification('Your email client will open with the application details. Please send the email to complete your application.', 'success');
+    this.reset();
+    
+    // Reset field colors
+    requiredFields.forEach(field => {
+        document.getElementById(field).style.borderColor = '#e0e0e0';
+    });
+    
+    // Reset button
+    setTimeout(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-    });
+    }, 2000);
 });
 
 // Create email content for business application
