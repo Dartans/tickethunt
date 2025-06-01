@@ -1,12 +1,12 @@
 {
-  "name": "tickethunt-website",
+  "name": "localtreasure-website",
   "version": "1.0.0",
-  "description": "TicketHunt - Interactive Business Adventure Website - Static Site",
+  "description": "LocalTreasure - Interactive Business Adventure Website - Static Site",
   "scripts": {
     "build": "echo 'Static site - no build required'",
     "vercel-build": "echo 'Static deployment ready'"
   },
-  "keywords": ["tickethunt", "business", "adventure", "marketing", "static"],
-  "author": "TicketHunt Team",
+  "keywords": ["localtreasure", "business", "adventure", "marketing", "static"],
+  "author": "LocalTreasure Team",
   "license": "MIT"
 }

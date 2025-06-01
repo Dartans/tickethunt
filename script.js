@@ -72,7 +72,7 @@ document.getElementById('businessForm').addEventListener('submit', function(e) {
     
     // Create email content and open email client
     const emailBody = createEmailContent(data);
-    const mailtoLink = `mailto:info@tickethunt.com?subject=TicketHunt Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:info@localtreasure.com?subject=LocalTreasure Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.open(mailtoLink);
@@ -95,7 +95,7 @@ document.getElementById('businessForm').addEventListener('submit', function(e) {
 // Create email content for business application
 function createEmailContent(data) {
     return `
-New TicketHunt Business Application
+New LocalTreasure Business Application
 
 Business Details:
 - Name: ${data.businessName}

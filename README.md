@@ -1,19 +1,19 @@
-# TicketHunt Website
+# LocalTreasure Website
 
 *Presented by Expose The North*
 
-A modern, interactive **static website** for the TicketHunt business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win local event tickets!
+A modern, interactive **static website** for the LocalTreasure business adventure concept. Local businesses pay to become clue stops, driving new customers to their doors while participants hunt for clues to win local event tickets!
 
 ## About Expose The North
 
-TicketHunt is proudly presented by **Expose The North**, a multimedia production company with over 24 years of experience in media production and community engagement. ETN is known for their dedication to the craft and innovation in bringing communities together.
+LocalTreasure is proudly presented by **Expose The North**, a multimedia production company with over 24 years of experience in media production and community engagement. ETN is known for their dedication to the craft and innovation in bringing communities together.
 
 - Reader's Choice Award Winner Diamond Tier 2021
 - Twice nominated for Niagara Music Awards
 - "We Go There...And BEYOND!"
 
 **Website**: [sharetheshock.ca](https://sharetheshock.ca/)  
-**Live Site**: [tickethunt.sharetheshock.ca](https://tickethunt.sharetheshock.ca/)
+**Live Site**: [localtreasure.sharetheshock.ca](https://localtreasure.sharetheshock.ca/)
 
 ## Features
 
@@ -69,7 +69,7 @@ This is a static site that can be deployed anywhere:
 2. Form validation ensures all required fields are completed
 3. JavaScript generates a pre-filled email with all application details
 4. User's default email client opens with the application ready to send
-5. Business sends email to `info@tickethunt.com` to complete application
+5. Business sends email to `info@localtreasure.com` to complete application
 
 ### Benefits of Static Approach:
 - **No server costs** - Deploy anywhere for free
@@ -104,12 +104,12 @@ This is a static site that can be deployed anywhere:
 
 ## License
 
-MIT License - feel free to use this for your TicketHunt business!
+MIT License - feel free to use this for your LocalTreasure business!
 
 ## Support
 
-For questions about the website or TicketHunt concept:
-- Email: info@tickethunt.com
+For questions about the website or LocalTreasure concept:
+- Email: info@localtreasure.com
 - Phone: (555) 123-HUNT
 
 ---
