@@ -72,7 +72,7 @@ document.getElementById('businessForm').addEventListener('submit', function(e) {
     
     // Create email content and open email client
     const emailBody = createEmailContent(data);
-    const mailtoLink = `mailto:info@localtreasure.com?subject=LocalTreasure Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:info@sharetheshock.ca?subject=LocalTreasure Business Application - ${data.businessName}&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.open(mailtoLink);
@@ -234,7 +234,109 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+    
+    // Handle signup button clicks
+    // Join as Business button
+    const joinBusinessBtns = document.querySelectorAll('a[href="#businesses"]');
+    joinBusinessBtns.forEach(btn => {
+        if (btn.textContent.includes('Join as Business')) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openBusinessSignupEmail();
+            });
+        }
+    });
+    
+    // Start Playing button
+    const startPlayingBtns = document.querySelectorAll('a[href="#players"]');
+    startPlayingBtns.forEach(btn => {
+        if (btn.textContent.includes('Start Playing')) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPlayerSignupEmail();
+            });
+        }
+    });
+    
+    // Join Next Hunt button
+    const joinHuntBtns = document.querySelectorAll('a[href="#contact"]');
+    joinHuntBtns.forEach(btn => {
+        if (btn.textContent.includes('Join Next Hunt')) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPlayerSignupEmail();
+            });
+        }
+    });
 });
+
+// Open business signup email
+function openBusinessSignupEmail() {
+    const subject = 'LocalTreasure Business Interest - Partnership Inquiry';
+    const body = `Hi LocalTreasure Team,
+
+I'm interested in becoming a business partner for LocalTreasure treasure hunts.
+
+Please send me more information about:
+- Available partnership tiers and pricing
+- How the treasure hunt works for businesses
+- Next available hunt dates
+- Setup requirements
+
+My business details:
+- Business Name: [Please fill in]
+- Location: [Please fill in]
+- Contact Name: [Please fill in]
+- Phone: [Please fill in]
+- Best time to contact: [Please fill in]
+
+I'm particularly interested in the [Bronze/Silver/Gold] tier.
+
+Thank you for your time!
+
+Best regards,
+[Your name]`;
+
+    const mailtoLink = `mailto:info@sharetheshock.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+    
+    showNotification('Your email client will open with business partnership inquiry details. Please fill in your information and send the email.', 'success');
+}
+
+// Open player signup email
+function openPlayerSignupEmail() {
+    const subject = 'LocalTreasure Player Signup - Join the Hunt!';
+    const body = `Hi LocalTreasure Team,
+
+I'm excited to participate in the next LocalTreasure hunt!
+
+Please add me to the player list and send me information about:
+- Next hunt date and start time
+- Registration requirements
+- How to receive the first clue
+- Prize details
+
+My contact information:
+- Name: [Please fill in]
+- Email: [This email address]
+- Phone: [Please fill in]
+- Emergency contact: [Please fill in]
+
+I understand that:
+- I need to visit participating businesses
+- I'll solve challenges and collect stamps
+- Completed hunts earn tickets to local events
+
+Looking forward to the adventure!
+
+Best regards,
+[Your name]`;
+
+    const mailtoLink = `mailto:info@sharetheshock.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+    
+    showNotification('Your email client will open with player signup details. Please fill in your information and send the email to join the hunt!', 'success');
+}
 
 // Pricing tier selection highlighting
 document.querySelectorAll('.tier').forEach(tier => {
