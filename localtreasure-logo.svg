@@ -49,8 +49,8 @@
   </g>
   
   <!-- Main text -->
-  <text x="160" y="55" fill="url(#treasureGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">TICKET</text>
-  <text x="160" y="95" fill="url(#huntGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">HUNT</text>
+  <text x="160" y="55" fill="url(#treasureGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">LOCAL</text>
+  <text x="160" y="95" fill="url(#huntGradient)" font-family="Arial, sans-serif" font-size="42" font-weight="bold">TREASURE</text>
   
   <!-- Tagline -->
   <text x="160" y="115" fill="url(#huntGradient)" font-family="Arial, sans-serif" font-size="14" font-style="italic">Interactive Business Adventure</text>
